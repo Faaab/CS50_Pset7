@@ -1,0 +1,44 @@
+<!-- based off (but not mindlessly copied from) view-source:http://finance.cs50.net/ -->
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+    <table class=" table table-striped">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="4"></td>
+                <td>{{ grandtotal }}</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <!-- loop starts here -->
+            {% for row in stockrows %}
+                <tr>
+                    <td>{{ row.symbol }}</td>
+                    <td>{{ row.name }}</td>
+                    <td>{{ row.shares }}</td>
+                    <td>{{ row.current_price }}</td>
+                    <td>{{ row.total }}</td>
+                </tr>
+            {% endfor %}
+            <tr>
+                <td>CASH</td>
+                <td colspan="3"></td>
+                <td>{{ usercash }}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

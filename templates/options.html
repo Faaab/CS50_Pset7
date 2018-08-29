@@ -1,0 +1,31 @@
+<!-- based on login.html from distribution code -->
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Options
+{% endblock %}
+
+{% block main %}
+
+    <form action="/options" method="post">
+        <div class="form-group">
+            <p>
+                Change password
+            </p>
+            <input autocomplete="off" autofocus class="form-control" name="password" placeholder="Password" type="password"/>
+            <input autocomplete="off" class="form-control" name="confirmation" placeholder="Confirm password" type="password"/>
+        </div>
+        <button class="btn btn-primary" type="submit" name="submitpass" value="submitpass">Change password</button>
+        <br>
+        <div class="form-group">
+            <p>
+                Add cash to account
+            </p>
+            <input autocomplete="off" class="form-control" min="0" name="cash" placeholder="Cash" type="number"/>
+        </div>
+        <button class="btn btn-primary" type="submit" name="submitcash" value="submitcash">Add Cash</button>
+    </form>
+
+
+{% endblock %}

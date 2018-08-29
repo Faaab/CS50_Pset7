@@ -1,3 +1,4 @@
+# C$50 Finance
 In Problem Set 7 of CS50's Introduction to Computer Science, the student is asked to implement a site on which users can play a stock buying/selling game, using real-time stock prices.
 
 Some of this project's code was provided by CS50 staff. The following code is my own:
